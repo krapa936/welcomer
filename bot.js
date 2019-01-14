@@ -58,7 +58,13 @@ return;
 });
 
 
-  
+  client.on('guildMemberAdd', member => {
+const codes = member.guild.channels.get("491307189646917672");//???? ?????
+if(!codes) return;
+if(codes) {
+codes.send(`**__Welcome To Gaming & Meeting 24/7 __ ${member}**`);          
+}
+});
 
 
 
