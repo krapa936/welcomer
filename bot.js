@@ -30,9 +30,10 @@ client.user.setGame(`by Floki | %help`,"http://twitch.tv/S-F")
 
 	
 
-const client = new Discord.Client();
-var prefix = "*&";
+
+
 client.on("message", message => {
+	var prefix = "*&";
 
             if (message.content.startsWith(prefix + "bc")) {
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
