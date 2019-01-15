@@ -32,20 +32,6 @@ client.user.setGame(`by Floki | %help`,"http://twitch.tv/S-F")
 
 
 
-client.on("message", message => {
-	var prefix = "*&";
-
-            if (message.content.startsWith(prefix + "bc")) {
-                         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
-  let args = message.content.split(" ").slice(1);
-  var argresult = args.join(' '); 
-  message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
- m.send(`${argresult}\n ${m}`);
-})
- message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'all').size}\` : sent to`); 
- message.delete(); 
-};     
-});
 
 
 
@@ -59,35 +45,13 @@ client.on("message", message => {
 
 
 
-client.on('message', message => {
-    if (message.author.id === client.user.id) return;
-    if (message.guild) {
-   let embed = new Discord.RichEmbed()
-    let args = message.content.split(' ').slice(1).join(' ');
-if(message.content.split(' ')[0] == prefix + 'bc') {
-    if (!args[1]) {
-return;
-}
-        message.guild.members.forEach(m => {
-   if(!message.member.hasPermission('ADMINISTRATOR')) return;
-            var bc = new Discord.RichEmbed()
-            .addField(' » message : ', args)
-            .setColor('#ff0000')
-            // m.send(`[${m}]`);
-            m.send(`${m}`,{embed: bc});
-        });
-    }
-    } else {
-        return;
-    }
-});
 
 
   client.on('guildMemberAdd', member => {
 const codes = member.guild.channels.get("491307189646917672");//???? ?????
 if(!codes) return;
 if(codes) {
-codes.send(`**__Welcome To Gaming & Meeting 24/7 __ ${member}**`);          
+codes.send(`**__Welcome To Gaming & Meeting 24/7  __ ${member}**`);          
 }
 });
 
