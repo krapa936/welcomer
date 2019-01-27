@@ -83,39 +83,6 @@ codes.send(`**__Welcome To Gaming & Meeting 24/7  __ ${member}**`);
   
   
 
-client.on('message', message => {
-
-    if (message.content.startsWith("hi")) {        
-    const embed = new Discord.RichEmbed()
-        .setColor("#081070")
-        .setDescription(" hello Floki Loves you :tada:")
-      message.channel.sendEmbed(embed).then(message => {message.delete(60000)});
-}
-});
-
-
-
-client.on('message', message => {
-
-    if (message.content.startsWith("hello")) {        
-    const embed = new Discord.RichEmbed()
-        .setColor("#081070")
-        .setDescription(" hello i hope you doing good today Floki Loves you :tada:")
-      message.channel.sendEmbed(embed).then(message => {message.delete(60000)});
-}
-});
-  
-client.on('message', message => {
-
-    if (message.content.startsWith("welcome")) {        
-    const embed = new Discord.RichEmbed()
-        .setColor("#081070")
-        .setDescription(" thanks for welcoming people that's nice :heart:  ")
-      message.channel.sendEmbed(embed).then(message => {message.delete(60000)});
-}
-});
- 
-
 
 
 
