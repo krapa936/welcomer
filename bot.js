@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '-'
+
 //Dating Gamers Bot By Luca Changretta
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
